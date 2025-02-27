@@ -17,7 +17,9 @@ engaging user interface for browsing, filtering, and applying to jobs efficientl
 
 ✅ Seamless Job Applications – Users can quickly apply with resumes and cover letters.
 
+
 **🔹 Core Functionalities**
+
 
 **🏠 Home Page**
 
@@ -29,11 +31,11 @@ engaging user interface for browsing, filtering, and applying to jobs efficientl
 
 - Call-to-Action: Encourages users to start their job search or apply.
 
+
 **🔎 Job Listings Page**
 
-*Filter Panel:*
 
-*Job Category Selection*
+**Job Category Selection**
 
 ✅ Location Dropdown
 
@@ -66,12 +68,19 @@ engaging user interface for browsing, filtering, and applying to jobs efficientl
 
 /src
  ├── components      # Reusable UI components
+
  ├── pages           # Page components (Home, Job Listings, etc.)
+
  ├── assets          # Images & icons
+
  ├── hooks           # Custom React hooks
+
  ├── utils           # Utility functions
+
  ├── styles         # Tailwind CSS configurations
+
  ├── App.tsx        # Main application file
+
  ├── main.tsx       # React DOM entry point
 
 
@@ -103,6 +112,7 @@ yarn dev
 
 http://localhost:5173
 
+
 **Contributing**
 
 Contributions are welcome! If you’d like to improve the project, please:
@@ -116,6 +126,7 @@ Contributions are welcome! If you’d like to improve the project, please:
 4) Push your branch (git push origin feature-branch)
 
 5) Create a Pull Request
+
 
 **License**
 
