@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 import Button from "../common/Button";
 const Header: React.FC = () => {
+  const navigate=useNavigate()
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
 return(
     <nav className="fixed top-0 z-10 w-full flex items-center justify-around p-4  px-6 md:px-16 bg-[#244A89]">
         <NavLink to="/">
-         <h1 className="text-white font-bold text-3xl p-2">NextHire</h1>
+         <h1 className="text-white font-bold text-3xl p-2" id="Nexthire">NextHire</h1>
         </NavLink>
           {/* Desktop Navigation */}
           <ul className="hidden md:flex gap-8">
@@ -42,8 +43,12 @@ return(
             </li>
           ))}
            <div className="flex items-center gap-3">
-              <Button butttonLabel="Sign In" buttonBackgroundColor="blue" buttonDimension="small"/>
-              <Button butttonLabel="Sign Up" buttonBackgroundColor="blue"buttonDimension="small" />
+           
+              <Button butttonLabel="Sign In" buttonBackgroundColor="blue" buttonDimension="small" />
+           
+            <Button butttonLabel="Sign Up" buttonBackgroundColor="blue"buttonDimension="small"   action={() => navigate("/signup")} />
+          
+             
               </div>
         </ul>
         <button

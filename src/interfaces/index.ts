@@ -25,8 +25,13 @@ export interface Jobs{
 }
 export interface ButtonProps{
     butttonLabel:string
-  
+  type?: "button" | "submit" | "reset"
     buttonDimension:"small"| "medium"
     buttonBackgroundColor:"blue"
     action?:()=>void
+}
+export interface FormValues{
+    username:string
+email:string
+password:string
 }
