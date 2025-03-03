@@ -11,8 +11,8 @@ const{values,handleChange,handleSubmit,apierror,errors,successmessage}=useSignUp
 
 })
 return(
-    <div className= "w-full mx-auto m-4 flex md:flex-row flex-col items-center justify-center rounded-lg bg-[#244A89] ">
-<div className="md:w-1/2  bg-[#2483B9] flex items-center justify-center">
+    <div className= "max-w-5xl w-full mx-auto m-4 flex md:flex-row flex-col items-center justify-center rounded-lg bg-[#244A89] ">
+<div className="md:w-1/2   flex items-center justify-center">
 <img src={signInImage} alt="signInImage" className="w-[690px] h-auto object-cover " />
 </div>
 <div className="md:w-1/2 p-6 rounded-md ">
@@ -27,7 +27,6 @@ return(
 {successmessage}
 </div>
 )}
-<h1 className="text-center text-white md:text-2xl text-xl" id="create-account-text">Create your Account and Join unlimited Job Package</h1>
 
 
 <form onSubmit={(e:FormEvent<HTMLFormElement> ) =>{
@@ -37,6 +36,8 @@ return(
 }}
 className=" mx-auto rounded-md p-9"
     >
+        <h1 className="text-center text-white md:text-lg font-bold mb-4 text-sm">Create your Account and Join unlimited Job Package</h1>
+
     <div className="mb-4 flex flex-col   ">
     <label htmlFor="username" className="text-white mb-2 "
     aria-label="Enter your username"

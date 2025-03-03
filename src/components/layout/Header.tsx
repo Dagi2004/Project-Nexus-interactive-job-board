@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     setIsOpen(!isOpen);
   };
   const navItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/home" },
     { name: "About Us", path: "/about" },
     { name: "Job Search", path: "/job-search" },
     { name: "Saved Jobs", path: "/saved-jobs" },
