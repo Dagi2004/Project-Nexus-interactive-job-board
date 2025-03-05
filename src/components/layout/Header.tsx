@@ -44,7 +44,7 @@ return(
           ))}
            <div className="flex items-center gap-3">
            
-              <Button butttonLabel="Sign In" buttonBackgroundColor="blue" buttonDimension="small" />
+              <Button butttonLabel="Sign In" buttonBackgroundColor="blue" buttonDimension="small" action={() => navigate("/signin")} />
            
             <Button butttonLabel="Sign Up" buttonBackgroundColor="blue"buttonDimension="small"   action={() => navigate("/signup")} />
           

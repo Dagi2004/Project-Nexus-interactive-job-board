@@ -30,8 +30,13 @@ export interface ButtonProps{
     buttonBackgroundColor:"blue"
     action?:()=>void
 }
-export interface FormValues{
+export interface FormSignUpValues{
     username:string
 email:string
+password:string
+}
+export interface FormSignInValues{
+   
+username:string
 password:string
 }

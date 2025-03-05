@@ -43,7 +43,7 @@ className=" mx-auto rounded-md p-9"
     aria-label="Enter your username"
     aria-describedby={errors.username ? "userName-error" : "undefined"} 
     >UserName</label>
-    <input type="text" name="username" value={values.username} onChange={handleChange}  className="rounded-md p-3 border border-blue-600 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Abebe23232" />
+    <input type="text" name="username" value={values.username} onChange={handleChange}  className="rounded-md p-3 border border-blue-600 bg-white focus:outline-none ${error.username ? focus:ring-red-500 : focus:ring-blue-400 focus:ring-2} " placeholder="Abebe23232" />
 {errors.username && <p className="text-red-500">{errors.username}</p>}
     </div>
     <div className="mb-4 flex flex-col   ">
