@@ -40,3 +40,26 @@ export interface FormSignInValues{
 username:string
 password:string
 }
+export interface EmploymentType{
+FT:string
+PT:string
+C:string
+F:string
+I:string
+}
+export interface ExperienceLevel{
+    E:string
+    M:string
+    S:string
+    }
+export interface JobListing{
+    id:string
+    title:string
+    logo:string
+    description:string
+    location:string
+    posted_date:string
+    salary_range:string
+    employmentType:EmploymentType
+    experienceLevel:ExperienceLevel
+}

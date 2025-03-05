@@ -10,9 +10,18 @@ import zigzagTwo from "../../src/assets/images/LineZigzagTwo.png"
 import SearchIcon from "../../src/assets/images/Search.png"
 import ConnectIcon from "../../src/assets/images/Connect.png"
 import React from "react"
-
+import { BeatLoader } from "react-spinners"
+import useJobs from "../hooks/useJobs"
 const Home:React.FC=()=>{
+const {jobs,loading,errors}=useJobs()
+const featuredJobs=jobs.slice(0,4)
+if(loading) return 
+<BeatLoader/>
 
+
+if(errors) return <div className="max-w-full bg-red-500 rounded-md p-2">
+<p>Error:{errors}</p>
+</div>
 return(
     <>
     
@@ -42,10 +51,12 @@ return(
     <p className="text-[#ecf5fa] md:text-3xl text-xl mb-3 font-medium">Top Jobs You Can Apply for Today!</p>
 </div>
 <div className="grid sm:gris-cols-1 md:gap-4 gap-6 md:grid-cols-3 lg:grid-cols-4 place-items-center">
-<JobCard/>
-<JobCard/>
-<JobCard/>
-<JobCard/>
+{featuredJobs.map((job,index)=>(
+    
+<JobCard key={index} {...job}/> 
+
+    
+))}
 
 
 </div>
