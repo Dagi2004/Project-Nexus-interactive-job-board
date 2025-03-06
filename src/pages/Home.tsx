@@ -11,12 +11,17 @@ import SearchIcon from "../../src/assets/images/Search.png"
 import ConnectIcon from "../../src/assets/images/Connect.png"
 import React from "react"
 import { BeatLoader } from "react-spinners"
+import { Link } from "react-router-dom"
 import useJobs from "../hooks/useJobs"
 const Home:React.FC=()=>{
 const {jobs,loading,errors}=useJobs()
 const featuredJobs=jobs.slice(0,4)
-if(loading) return 
-<BeatLoader/>
+if (loading)
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <BeatLoader color="#3B82F6" />
+      </div>
+    );
 
 
 if(errors) return <div className="max-w-full bg-red-500 rounded-md p-2">
@@ -33,7 +38,10 @@ return(
 <h2 className="font-bold mb-4 md:text-3xl text-2xl text-white ">Find Your Dream Job Today</h2>
 <p className=" text-md text-white">Looking for a new job or the right hire? We can help! Explore opportunities, apply easily, and grow your career. Employers, post jobs and find top talent now!</p>
 <div className="flex items-center justify-center mt-4">
-<Button buttonBackgroundColor="blue" buttonDimension="medium" butttonLabel="Apply Now"/>
+    <Link to="/job-search">
+    <Button buttonBackgroundColor="blue" buttonDimension="medium" butttonLabel="Apply Now"/>
+    </Link>
+
 </div>
 </div>
 
@@ -48,7 +56,7 @@ return(
     <section className="mx-auto py-10">
 <div className="flex flex-col justify-center items-center gap-2">
     <h4 className="md:text-lg text-sm text-cente text-white ">Featured Jobs</h4>
-    <p className="text-[#ecf5fa] md:text-3xl text-xl mb-3 font-medium">Top Jobs You Can Apply for Today!</p>
+    <p className="text-[#2D9CDB] md:text-3xl text-xl mb-3 font-medium">Top Jobs You Can Apply for Today!</p>
 </div>
 <div className="grid sm:gris-cols-1 md:gap-4 gap-6 md:grid-cols-3 lg:grid-cols-4 place-items-center">
 {featuredJobs.map((job,index)=>(
