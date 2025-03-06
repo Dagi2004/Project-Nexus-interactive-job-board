@@ -7,6 +7,7 @@ import AccessibilityFirst from "../../src/assets/images/Accessibility-First.png"
 import seamlessIntegration from "../../src/assets/images/Seamless-Integration.png"
 import VisionImage from "../../src/assets/images/vision.png"
 import MissionImage from "../../src/assets/images/Misson.png"
+import Footer from "../components/layout/Footer";
 const About:React.FC=() => {
   return (
     <>
@@ -106,6 +107,7 @@ Ensure a seamless and inclusive job application process.
    </div>
 
 </section>
+<Footer/>
        </section>
     </>
    

@@ -40,18 +40,24 @@ export interface FormSignInValues{
 username:string
 password:string
 }
-export interface EmploymentType{
-FT:string
-PT:string
-C:string
-F:string
-I:string
-}
-export interface ExperienceLevel{
-    E:string
-    M:string
-    S:string
+export type EmploymentType="FT" | "PT" | "C" | "F" | "I"
+export const employmentTypeMap:{
+    [key in EmploymentType]:string}={
+        "FT":"Full Time",
+        "PT":"Part Time",
+        "C":"Contract",
+        "F":"Freelance",
+        "I":"Internship",
+        
     }
+    export type ExperienceLevel="E" | "M" | "S"
+    export const experienceLevelMap:{
+        [key in ExperienceLevel]:string}={
+            E:"Entry Level",
+            M:"Mid Level",
+            S:"Senior Level"
+        }
+    
 export interface JobListing{
     id:string
     title:string
