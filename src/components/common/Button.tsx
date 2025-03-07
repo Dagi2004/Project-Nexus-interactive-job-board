@@ -2,7 +2,8 @@ import { ButtonProps } from "../../interfaces"
 import React from "react"
 const Button:React.FC<ButtonProps>=({butttonLabel,buttonBackgroundColor,buttonDimension,action,type})=>{
 const backgroundColorClass=buttonBackgroundColor ? {
-     blue: "bg-[#2D9CDB]"
+     blue: "bg-[#2D9CDB]",
+     red:"bg-[#EE5858]",
 }[buttonBackgroundColor] : "bg-[#2D9CDB]"
 const buttonDimesnionClass=buttonDimension ? {
     small:"px-3 py-1",

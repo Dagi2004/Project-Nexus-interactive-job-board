@@ -27,7 +27,7 @@ export interface ButtonProps{
     butttonLabel:string
   type?: "button" | "submit" | "reset"
     buttonDimension:"small"| "medium"
-    buttonBackgroundColor:"blue"
+    buttonBackgroundColor:"blue" | "red"
     action?:()=>void
 }
 export interface FormSignUpValues{
@@ -57,7 +57,18 @@ export const employmentTypeMap:{
             M:"Mid Level",
             S:"Senior Level"
         }
-    
+    export interface Job{
+        id:string
+        title:string
+        location:string
+        posted_date:string
+        salary_range:string
+    }
+    export interface SavedJobsContextProps{
+        savedJobs:Job[]
+        addJob:(job:Job)=>void
+        removeJob:(jobId:string)=>void
+    }
 export interface JobListing{
     id:string
     title:string

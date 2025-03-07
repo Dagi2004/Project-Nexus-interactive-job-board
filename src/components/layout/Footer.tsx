@@ -1,9 +1,21 @@
 import React from "react";
-
+import { motion } from "motion/react";
 const Footer:React.FC = () => {
   return (
     <div>
-    <footer className="bg-[#334861] w-full md:h-[293px] h-auto">
+    <motion.footer 
+  
+  initial={{ y:-100, opacity: 0 }}
+  animate={{ y:0, opacity: 1 }}
+  transition={{
+   delay:0.5,
+   y: { type: "spring", stiffness: 60 },
+      opacity: { duration: 1 },
+      ease: "easeIn",
+    duration: 1,
+  }}
+    
+    className="bg-[#334861] w-full md:h-[293px] h-auto">
         {/* Logo Section */}
         <div className=" mx-auto px-5">
           
@@ -11,12 +23,12 @@ const Footer:React.FC = () => {
           {/* Navigation Sections */}
           <div className="flex flex-wrap justify-around space-y-8 md:space-y-0 gap-6">
           <div className="w-full md:w-1/4 py-5">
-          <h1 className="text-white font-bold text-3xl p-2" id="Nexthire">NextHire</h1>
+          <h1 className="text-white font-bold text-xl p-2" id="Nexthire">NextHire</h1>
               <p className="text-white text-md leading-8">Discover the ultimate hub for connecting with exceptional job seekers and effortlessly filling your talent pipeline.</p>
             </div>
             {/* About Us Section */}
             <div className="w-full md:w-1/4 py-5">
-              <h2 className="text-[30px] font-semibold text-white mb-4 text-center md:text-left">
+              <h2 className="text-xl font-semibold text-white mb-4 text-center md:text-left">
                Quick Links
               </h2>
               <ul className="space-y-3 text-center md:text-left">
@@ -60,7 +72,7 @@ const Footer:React.FC = () => {
 
             {/* Resources Section */}
             <div className="w-full md:w-1/4 py-5">
-              <h2 className="text-[30px] text-white font-semibold  mb-4 text-center md:text-left">
+              <h2 className="text-xl text-white font-semibold  mb-4 text-center md:text-left">
               Contact Info
               </h2>
               <ul className="space-y-5 text-center md:text-left">
@@ -118,7 +130,7 @@ const Footer:React.FC = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 };

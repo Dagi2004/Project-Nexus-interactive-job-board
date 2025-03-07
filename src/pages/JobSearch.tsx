@@ -114,7 +114,7 @@ return Object.keys(experienceLevelMap).find((key)=>experienceLevelMap[key as key
                      
                         {filteredJobs.length > 0 ? (
                               <>
-                             <p className="text-center text-2xl text-white col-span-full ">You have <span className="text-green-600 font-bold">{filteredJobs.length}</span>  jobs available</p>
+                             <h1 className="text-center text-2xl text-white col-span-full ">You have <span className="text-green-600 font-bold">{filteredJobs.length}</span>  jobs available</h1>
                            {filteredJobs.map((job, index) => 
                            (
                             <JobCard key={index} {...job} />
