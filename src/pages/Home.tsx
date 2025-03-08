@@ -35,6 +35,7 @@ return(
 <motion.div 
 initial={{ opacity: 0 }}
 animate={{  opacity: 1 }}
+viewport={{ once: false, amount: 0.5 }}
 transition={{
  
   duration: 1,
@@ -43,6 +44,7 @@ className="flex md:flex-row flex-col justify-center items-center gap-4 py-10">
 <motion.div 
   initial={{ y:-100, opacity: 0 }}
   animate={{ y:0, opacity: 1 }}
+  viewport={{ once: false, amount: 0.5 }}
   transition={{
    delay:0.5,
    y: { type: "spring", stiffness: 60 },
@@ -57,6 +59,7 @@ className="md:w-1/2 text-center md:py-7 py-14">
 <motion.div 
  initial={{ y:-50, opacity: 0 }}
  animate={{ y:0, opacity: 1 }}
+ viewport={{ once: false, amount: 0.5 }}
  transition={{delay:0.8, duration:1 , ease:"easeOut"}}
 className="flex items-center justify-center mt-4">
     <Link to="/job-search">
@@ -69,6 +72,7 @@ className="flex items-center justify-center mt-4">
 <motion.div 
  initial={{ x:100, opacity: 0 }}
  animate={{x:0,opacity:1}}
+ viewport={{ once: false, amount: 0.5 }}
  transition={{
     delay:0.5,
     y: { type: "spring", stiffness: 60 },
@@ -88,7 +92,8 @@ className="md:w-1/2 mt-4">
 <motion.div 
 
 initial={{ y:-100, opacity: 0 }}
-animate={{ y:0, opacity: 1 }}
+whileInView={{ y:0, opacity: 1 }}
+viewport={{ once: false, amount: 0.5 }}
 transition={{
  delay:0.5,
  y: { type: "spring", stiffness: 60 },
@@ -103,7 +108,7 @@ className="flex flex-col justify-center items-center gap-2">
 </motion.div>
 <motion.div 
 initial={{ x:-100, opacity: 0 }}
-animate={{x:0,opacity:1}}
+whileInView={{x:0,opacity:1}}
 transition={{
    delay:0.5,
    y: { type: "spring", stiffness: 60 },
@@ -134,7 +139,7 @@ className="grid sm:gris-cols-1 md:gap-4 gap-6 md:grid-cols-3 lg:grid-cols-4 plac
 <motion.div 
 
 initial={{ y:-100, opacity: 0 }}
-animate={{ y:0, opacity: 1 }}
+whileInView={{ y:0, opacity: 1 }}
 transition={{
  delay:0.5,
  y: { type: "spring", stiffness: 60 },
@@ -160,7 +165,8 @@ transition={{
 <img src={zigzagTwo} alt="Zigazag Line Ome"   className="hidden md:block w-[310px] h-auto"/>
 <motion.div 
 initial={{ x:-100, opacity: 0 }}
-animate={{x:0,opacity:1}}
+whileInView={{x:0,opacity:1}}
+viewport={{ once: false, amount: 0.5 }}
 transition={{
    delay:0.5,
    y: { type: "spring", stiffness: 60 },
@@ -185,7 +191,8 @@ transition={{
 <div className="flex flex-row justify-center items-center mx-auto">
 <motion.div 
  initial={{ y:-50, opacity: 0 }}
- animate={{ y:0, opacity: 1 }}
+ whileInView={{ y:0, opacity: 1 }}
+ viewport={{ once: false, amount: 0.5 }}
  transition={{delay:0.8, duration:1 , ease:"easeOut"}} className="w-[300px] md:w-[392px] h-auto rounded-md bg-[#B4EEF5] p-4">
 <div className="w-full h-auto p-2 bg-[#244A89] rounded-lg">
     <p className="text-center text-white">Step 3 </p>

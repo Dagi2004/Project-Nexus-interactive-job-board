@@ -8,22 +8,57 @@ import seamlessIntegration from "../../src/assets/images/Seamless-Integration.pn
 import VisionImage from "../../src/assets/images/vision.png"
 import MissionImage from "../../src/assets/images/Misson.png"
 import Footer from "../components/layout/Footer";
+import { motion } from 'motion/react'
+
+
 const About:React.FC=() => {
   return (
     <>
      <Header/>
      <section className="mx-auto  bg-[#253C56] w-full h-auto">
 <div className="flex md:flex-row flex-col justify-center items-center gap-4 py-10">
-<div className="md:w-1/2 text-center md:py-7 py-14">
+<motion.div 
+
+initial={{ x:-100, opacity: 0 }}
+whileInView={{x:0,opacity:1}}
+viewport={{ once: false, amount: 0.5 }}
+transition={{
+   delay:0.5,
+   y: { type: "spring", stiffness: 60 },
+      opacity: { duration: 1 },
+      ease: "easeOut",
+    duration: 1,
+  }}
+
+className="md:w-1/2 text-center md:py-7 py-14">
 <h2 className="font-bold  md:text-3xl text-2xl text-white mb-4 ">About Us</h2>
 <p className=" text-md text-white leading-8">The Interactive Job Board Platform is designed to simplify the job search process for  professionals across various industries. Our mission is to connect talented individuals  with the right opportunities while providing recruiters with a seamless hiring  experience.</p>
-</div>
-<div className="md:w-1/2 mt-4">
+</motion.div>
+<motion.div 
+
+initial={{ y:-50, opacity: 0 }}
+whileInView={{ y:0, opacity: 1 }}
+viewport={{ once: false, amount: 0.5 }}
+transition={{delay:0.8, duration:1 , ease:"easeOut"}}
+className="md:w-1/2 mt-4">
 <img src={AboutUsImage} alt="hero" className="max-w-[584px] w-full h-auto" />
-</div>
+</motion.div>
 </div>
 <section className='py-12 mx-auto'>
-<div className="flex flex-col justify-center items-center lg:flex-row lg:space-x-5 mb-10">
+<motion.div
+
+initial={{ y:-100, opacity: 0 }}
+whileInView={{ y:0, opacity: 1 }}
+transition={{
+ delay:0.5,
+ y: { type: "spring", stiffness: 60 },
+    opacity: { duration: 1 },
+    ease: "easeIn",
+  duration: 1,
+}}
+
+
+className="flex flex-col justify-center items-center lg:flex-row lg:space-x-5 mb-10">
             {/* Blog Image */}
             <img
               src={VisionImage}
@@ -41,11 +76,26 @@ const About:React.FC=() => {
               </p>
              
             </div>
-          </div>
+          </motion.div>
 
           {/* Mission Post  */}
-          <div className="flex flex-col justify-center items-center  lg:flex-row lg:space-x-5 mb-8 mt-9">
-            <div className="flex flex-col justify-center space-x-5 items-center mx-auto">
+          <motion.div 
+         initial={{ x:100, opacity: 0 }}
+         whileInView={{x:0,opacity:1}}
+        
+         transition={{
+            delay:0.5,
+            y: { type: "spring", stiffness: 60 },
+               opacity: { duration: 1 },
+               ease: "easeOut",
+             duration: 1,
+           }}
+          
+          className="flex flex-col justify-center items-center  lg:flex-row lg:space-x-5 mb-8 mt-9">
+            <div 
+             
+             
+            className="flex flex-col justify-center space-x-5 items-center mx-auto">
               <h1 className="md:text-[35px] text-[27px] text-center text-white md:text-left  font-semibold ">
               Our Mission
               </h1>
@@ -67,44 +117,77 @@ Ensure a seamless and inclusive job application process.
             </div>
             {/* Blog Image */}
             <img
+
+
               src={MissionImage}
              alt="Our Mission"
           className="max-w-[280px] lg:w-[320px] h-[347px] rounded-[32px] object-cover  lg:mb-0 mt-4 lg:mt-0"
             />
 
             {/* Blog Content */}
-          </div>
+          </motion.div>
 </section>
 {/*Why Choose Us section*/}
 <section className='py-10'>
    <h2 className='text-white text-center mb-6 text-2xl md:text-3xl'>Why Choose Us?</h2>
-   <div className='grid sm:grid-cols-1 md:grid-cols-2 place-items-center gap-5 mx-auto '>
+   <motion.div 
+   initial={{ opacity: 0, y: 50 }}
+   whileInView={{ opacity: 1, y: 0 }}
+   transition={{ duration: 0.6, ease: "easeOut", staggerChildren: 0.2 }}
+   viewport={{ once: true }}
    
-<div className='flex flex-col items-center justify-center w-[440px] h-auto bg-[#B4EEF5] p-2 rounded-md'>
+   className='grid sm:grid-cols-1 md:grid-cols-2 place-items-center gap-5 mx-auto '>
+   
+<motion.div 
+ initial={{ opacity: 0, y: 50 }}
+ whileInView={{ opacity: 1, y: 0 }}
+ transition={{ duration: 0.5, delay: 0.1 }}
+ whileHover={{ scale: 1.05 }}
+
+className='flex flex-col items-center justify-center w-[440px] h-auto bg-[#B4EEF5] p-2 rounded-md'>
 <h2 className='text-black text-2xl md:text-xl font-bold'>User-Centric Design</h2>
     <img src={userCentricDesign} alt="UserCentricDesign"  className='w-[160px] h-auto mb-3' />
     <p className='text-black text-center'> A streamlined interface that makes job searching easy  and efficient.</p>
 
-</div>
-<div className='flex flex-col items-center justify-center w-[440px] h-auto bg-[#B4EEF5] p-2 rounded-md'>
+</motion.div>
+<motion.div 
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.5, delay: 0.2 }}
+whileHover={{ scale: 1.05 }}
+
+className='flex flex-col items-center justify-center w-[440px] h-auto bg-[#B4EEF5] p-2 rounded-md'>
 <h2 className='text-black text-2xl md:text-xl font-bold'>Advanced Filtering Options</h2>
     <img src={AdvancedFiltering} alt="Advanced Filtering Options"   className='w-[160px] h-auto mb-3'/>
     <p className='text-center'> Find the most relevant job listings based on  category, location, and experience level.</p>
 
-</div>
-<div className='flex flex-col items-center justify-center w-[440px] h-[auto] bg-[#B4EEF5] p-2 rounded-md'>
+</motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.3 }}
+  whileHover={{ scale: 1.05 }}
+
+
+className='flex flex-col items-center justify-center w-[440px] h-[auto] bg-[#B4EEF5] p-2 rounded-md'>
 <h2 className='text-black text-2xl md:text-xl font-bold'>Advanced Filtering Options</h2>
     <img src={AccessibilityFirst} alt="Accessibility First"  className='w-[160px] h-auto mb-3' />
     <p className='text-black text-center'>  Designed to be fully accessible and responsive for all users.</p>
 
-</div>
-<div className='flex flex-col items-center justify-center w-[440px] h-auto bg-[#B4EEF5] p-2 rounded-md'>
+</motion.div>
+<motion.div 
+
+initial={{ opacity: 0, y: 50 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 0.5, delay: 0.4 }}
+whileHover={{ scale: 1.05 }}
+className='flex flex-col items-center justify-center w-[440px] h-auto bg-[#B4EEF5] p-2 rounded-md'>
 <h2 className='text-black text-2xl md:text-xl font-bold'>Seamless Integration</h2>
     <img src={seamlessIntegration} alt="Seamless Integration"  className='w-[160px] h-auto mb-3'/>
 <p className='text-black text-center'>Smooth interactions and fast performance for an  optimal experience.</p>
-    </div>
+    </motion.div>
 
-   </div>
+   </motion.div>
 
 </section>
 <Footer/>

@@ -13,6 +13,7 @@ const Header: React.FC = () => {
     { name: "About Us", path: "/about" },
     { name: "Job Search", path: "/job-search" },
     { name: "Saved Jobs", path: "/saved-jobs" },
+    { name: "Job Application", path: "/job-application" },
   
 
   ];

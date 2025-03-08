@@ -9,6 +9,7 @@ import LogIn from './pages/Login'
 import { SavedJobsProvider } from './components/context/SavedJobsContext'
 import ProtectedRoute from './ProtectedRoute'
 import SavedJobs from './pages/Saved'
+import JobApplication from './pages/JobApplication'
 function App() {
   
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/job-search' element={<JobSearch/>}/>
        
         <Route path='/saved-jobs' element={<SavedJobs/>}/>
+        <Route path='/job-application' element={<JobApplication/>}/>
         
        
        
