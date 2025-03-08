@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {  JobApplication } from "../interfaces"
+import JobApplication from "../interfaces";
 import axios from "axios";
 
 const useFormApplication = (

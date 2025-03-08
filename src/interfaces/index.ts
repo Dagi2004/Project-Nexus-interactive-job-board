@@ -64,6 +64,13 @@ export const employmentTypeMap:{
         posted_date:string
         salary_range:string
     }
+    export default interface JobApplication{
+        resume:string
+        firstName:string
+        lastName:string
+        email:string
+        jobId:string
+    }
     export interface SavedJobsContextProps{
         savedJobs:Job[]
         addJob:(job:Job)=>void
