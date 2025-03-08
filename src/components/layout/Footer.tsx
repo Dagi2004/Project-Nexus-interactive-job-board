@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "motion/react";
+import { CiLinkedin } from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
 const Footer:React.FC = () => {
   return (
-    <div>
+    
     <motion.footer 
     
 
@@ -22,13 +25,13 @@ const Footer:React.FC = () => {
           
 
           {/* Navigation Sections */}
-          <div className="flex flex-wrap justify-around space-y-8 md:space-y-0 gap-6">
-          <div className="w-full md:w-1/4 py-5">
+          <div className="flex flex-col md:flex-row flex-wrap justify-around space-y-6 md:space-y-0 gap-6">
+          <div className="w-full md:w-1/4 flex flex-col items-center justify-center py-5">
           <h1 className="text-white font-bold text-xl p-2" id="Nexthire">NextHire</h1>
-              <p className="text-white text-md leading-8">Discover the ultimate hub for connecting with exceptional job seekers and effortlessly filling your talent pipeline.</p>
+              <p className="text-white text-center text-md leading-8">Discover the ultimate hub for connecting with exceptional job seekers and effortlessly filling your talent pipeline.</p>
             </div>
             {/* About Us Section */}
-            <div className="w-full md:w-1/4 py-5">
+            <div className="w-full  md:w-1/4 py-2 md:py-5">
               <h2 className="text-xl font-semibold text-white mb-4 text-center md:text-left">
                Quick Links
               </h2>
@@ -95,7 +98,7 @@ const Footer:React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="dagmawimilkias@gmail.com"
+                    href=""
                     className="text-white  hover:text-blue transition duration-200 "
                   >
                   United States, MA
@@ -106,33 +109,31 @@ const Footer:React.FC = () => {
                 
               </ul>
             </div>
+            </div>
 
            
+            <div className="flex flex-col md:flex-row items-center justify-between mt-10 gap-6 text-center md:text-left">
+<p className="text-center text-white">© 2025 Next Hire. All Rights Reserved.</p>
+<div className="flex flex-row gap-10">
+              <a href="https://et.linkedin.com/in/dagmawi-milkias" target="blank" rel="noopener noreferrer">
+            <CiLinkedin className="md:w-10 md:h-10 w-7 h-7 text-white cursor-pointer"/>
+            </a>
+            <a href="https://github.com/Dagi2004" target="blank" rel="noopener noreferrer">
+            <FaGithub className="md:w-10 md:h-10 w-7 h-7 text-white cursor-pointer"/>
+            </a>
+            <a href="https://t.me/DagmawiDev" target="blank" rel="noopener noreferrer">
+            <FaTelegram className="md:w-10 md:h-10 w-7 h-7 text-white cursor-pointer"/>
+            </a>
+           
 
+</div>
             {/* Stay Connected Section */}
-            <div className="w-full md:w-1/4 ">
-              <h2 className="text-xl font-semibold text-white mb-4 text-center md:text-left">
-                Stay Connected
-              </h2>
-              <div className="flex justify-center md:justify-start space-x-5">
-                <a href="#">
-                  
-                </a>
-                <a href="#">
-                  
-                </a>
-                <a href="#">
-                 
-                </a>
-                <a href="#">
-                  
-                </a>
-              </div>
-            </div>
+            
           </div>
+         
         </div>
       </motion.footer>
-    </div>
+  
   );
 };
 export default Footer;

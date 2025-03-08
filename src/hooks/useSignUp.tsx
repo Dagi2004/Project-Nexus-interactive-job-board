@@ -63,7 +63,7 @@ resetForm()
     const validateError = validate(values);
 
 
-    if (Object.keys(validateError).length === 0) {
+    if (Object.keys(validateError).length === 0) { 
    await(onSubmit(values)) // No errors, proceed with submission
 
 
