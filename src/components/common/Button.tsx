@@ -10,7 +10,7 @@ const buttonDimesnionClass=buttonDimension ? {
     medium:"px-6 py-2"
 }[buttonDimension]:""
 return(
-    <button onClick={action} type={type} className={`${backgroundColorClass} ${buttonDimesnionClass} text-sm font-semibold rounded-md hover:${backgroundColorClass}/50 transition duration-300 text-white` }>{butttonLabel}</button>
+    <button onClick={action} type={type} className={`${backgroundColorClass} ${buttonDimesnionClass} text-sm font-semibold mx-auto rounded-md block hover:${backgroundColorClass}/50 transition text-center duration-300 text-white` }>{butttonLabel}</button>
 );
 
 }

@@ -182,8 +182,10 @@ transition={{
 
 <h2 className="font-bold text-black mb-3">Search & Apply for Jobs</h2>
 <img src={SearchIcon} alt="Create Profile" className="w-[80px] h-[80px] mb-2" />
+<Link to="/job-application">
 <p className="text-black text-sm mb-4 text-center">Browse thousands of job listings across various industries. Use filters to find jobs that match your skills and preferences</p>
 <Button butttonLabel="Apply Now" buttonBackgroundColor="blue" buttonDimension="medium"/>
+</Link>
 </div>
 </motion.div>
 
@@ -201,8 +203,10 @@ transition={{
 <div className="mt-2 mx-auto flex flex-col justify-center items-center">
 <h2 className="font-bold text-black mb-3">Connect & Get Hired</h2>
 <img src={ ConnectIcon} alt="Create Profile" className="w-[80px] h-[80px] mb-2" />
+   <Link to="/job-search">
 <p className="text-black text-sm mb-4 text-center">Submit applications directly to employers and receive updates on your job status. Chat with recruiters and land your next opportunity!</p>
 <Button butttonLabel="Apply Now" buttonBackgroundColor="blue" buttonDimension="medium"/>
+</Link>
 </div>
 </motion.div>
 

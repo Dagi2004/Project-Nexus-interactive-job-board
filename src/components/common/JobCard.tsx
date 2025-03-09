@@ -4,6 +4,7 @@ import Button from "./Button";
 import Bookmark from "../../assets/images/bookmark.png";
 import redBookmark from "../../assets/images/red-bookmark.png"
 import { JobListing } from "../../interfaces";
+import { Link } from "react-router-dom";
 import { useSavedJobs } from "../context/SavedJobsContext";
 import { employmentTypeMap, experienceLevelMap } from "../../interfaces";
 
@@ -68,11 +69,14 @@ const JobCard: React.FC<JobListing> = ({ title, description, location, salary_ra
       </div>
 
       <div className="flex items-center justify-center mt-4">
+        <Link to="/job-application">
         <Button
           butttonLabel="Apply Now"
           buttonBackgroundColor="blue"
           buttonDimension="medium"
         />
+        </Link>
+        
       </div>
     </div>
   );
