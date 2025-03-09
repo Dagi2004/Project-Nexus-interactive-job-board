@@ -12,7 +12,7 @@ export const SavedJobsProvider:React.FC<{children:ReactNode}>=({children})=>{
     const addJob=(job:Job)=>{
         const updatedJobs=[...savedJobs,job]
 setSavedJobs(updatedJobs)
-localStorage.set("jobs",JSON.stringify(updatedJobs))
+localStorage.setItem("jobs",JSON.stringify(updatedJobs))
     }
     const removeJob=(jobId:string)=>{
         const updatedJobs=savedJobs.filter((job)=>job.id!==jobId)
