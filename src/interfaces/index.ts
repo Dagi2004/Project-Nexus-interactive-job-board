@@ -87,3 +87,6 @@ export interface JobListing{
     employmentType:EmploymentType
     experienceLevel:ExperienceLevel
 }
+export interface SucesssModalProps{
+    onClose:()=>void
+}

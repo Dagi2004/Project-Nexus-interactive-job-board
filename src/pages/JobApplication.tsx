@@ -1,14 +1,16 @@
 import useFormApplication from "../hooks/useFormApplication";
 import { useParams } from "react-router-dom";
+
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-
+import SucesssModal from "../components/common/SucessModal";
 import Button from "../components/common/Button";
 import { FormEvent } from "react";
 
 const JobApplication: React.FC = () => {
-    const { jobId } = useParams(); // If jobId is passed in the URL
-    const { applicationValue, handleChange, handleSubmit, apierror, error, successmessage } =useFormApplication ({
+    const { jobId } = useParams(); 
+   
+    const { applicationValue, handleChange, handleSubmit, apierror, error,showSuccessModal,setShowSuccessModal  } =useFormApplication ({
       firstName:"",
       lastName:"",
       resume:"",
@@ -28,17 +30,18 @@ const JobApplication: React.FC = () => {
                       {apierror}
                   </div>
               )}
-              {successmessage && (
-                  <div className="text-white bg-green-500 w-full rounded-md p-2 flex items-center mb-2">
-                      {successmessage}
-                  </div>
-              )}
+              
 <h1 className="text-center text-[#2D9CDB] md:text-lg font-bold mb-4 text-sm">Job Application Form</h1>
+{showSuccessModal && (
+    <SucesssModal onClose={()=>setShowSuccessModal(false)}/>
+)}
               <form
                   onSubmit={(e: FormEvent<HTMLFormElement>) => {
                       e.preventDefault(); // Prevent page refresh
                    
                       handleSubmit();
+                   
+
                   }}
                  className="mx-auto  bg-[#C9DFF3] rounded-md p-9 grid md:grid-cols-2 grid-cols-1 gap-6"
               >
