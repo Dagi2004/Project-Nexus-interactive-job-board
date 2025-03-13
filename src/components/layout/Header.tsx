@@ -4,10 +4,15 @@ import Button from "../common/Button";
 const Header: React.FC = () => {
   const navigate=useNavigate()
   const [isOpen, setIsOpen] = useState(false);
-
+const token=localStorage.getItem("access")
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const handleLogout=()=>{
+    localStorage.removeItem("access");
+    console.log("user logged out")
+    navigate("/login")
+  }
   const navItems = [
     { name: "Home", path: "/home" },
     { name: "About Us", path: "/about" },
@@ -43,14 +48,12 @@ return(
             
             </li>
           ))}
-           <div className="flex items-center gap-3">
+          {
+            token && (
+              <Button butttonLabel="Log Out" buttonBackgroundColor="red" buttonDimension="small" action={handleLogout} />
+            ) 
+          }
            
-              <Button butttonLabel="Sign In" buttonBackgroundColor="blue" buttonDimension="small" action={() => navigate("/signin")} />
-           
-            <Button butttonLabel="Sign Up" buttonBackgroundColor="blue"buttonDimension="small"   action={() => navigate("/signup")} />
-          
-             
-              </div>
         </ul>
         <button
           onClick={toggleMenu}
@@ -80,10 +83,11 @@ return(
                  
                 </li>
               ))}
-                <div className="flex flex-col items-center gap-3">
-                <Button butttonLabel="Sign In" buttonBackgroundColor="blue" buttonDimension="small"/>
-                <Button butttonLabel="Sign Up" buttonBackgroundColor="blue"buttonDimension="small" />
-                </div>
+                {
+            token && (
+              <Button butttonLabel="Log Out" buttonBackgroundColor="red" buttonDimension="small" action={handleLogout} />
+            ) 
+          }
                
             </ul>
           </div>
